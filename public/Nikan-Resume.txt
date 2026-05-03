@@ -1,0 +1,3 @@
+Nikan Resume Placeholder
+
+Replace this file with the final resume asset for production.
