@@ -55,7 +55,7 @@ export default function LabConsole({ items }: LabConsoleProps) {
             <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[color:var(--accent)]">
               {item.interaction.replaceAll("-", " ")}
             </p>
-            <h3 className="mt-4 font-display text-2xl uppercase tracking-[0.12em] text-[color:var(--foreground)]">
+            <h3 className="mt-4 font-display text-xl uppercase tracking-[0.12em] text-[color:var(--foreground)]">
               {item.title}
             </h3>
             <p className="mt-3 text-sm leading-6 text-[color:var(--copy)]">
@@ -185,7 +185,7 @@ export default function LabConsole({ items }: LabConsoleProps) {
               <div>
                 <p
                   id="command-palette-title"
-                  className="font-display text-2xl uppercase tracking-[0.15em] text-[color:var(--foreground)]"
+                  className="font-display text-xl uppercase tracking-[0.15em] text-[color:var(--foreground)]"
                 >
                   Command Palette
                 </p>

@@ -26,17 +26,17 @@ export function isHomeSectionId(value: string): value is HomeSectionId {
 }
 
 export const heroContent = {
-  eyebrow: "NIKAN OS / Developer Interface",
+  eyebrow: "Sydney, Australia / Full-Stack Software Engineer",
   name: "NIKAN",
   title: {
-    focus: "AI Software Engineer / Full-Stack Developer",
-    play: "Full-Stack Builder for SaaS, AI Workflows, and Product Systems"
+    focus: "Full-Stack Software Engineer",
+    play: "Full-Stack Developer for Scalable Web Products and Modern Delivery Workflows"
   },
   description: {
     focus:
-      "Full-stack JavaScript and TypeScript developer from Nepal, based in Sydney, building practical web applications across React, Next.js, Node.js, PostgreSQL, MongoDB, testing, CI/CD, and AI-assisted SaaS workflows.",
+      "Sydney-based full-stack software developer with hands-on experience building production-ready web applications using React, Next.js, Node.js, and TypeScript, with practical exposure to AI-assisted tools, APIs, databases, testing, Docker, and CI/CD.",
     play:
-      "Full-stack JavaScript and TypeScript developer from Nepal, now based in Sydney, building product-minded web systems where clean UI, reliable APIs, automation, and AI-assisted workflows work as one stack."
+      "Full-stack developer based in Sydney, building scalable and user-friendly web applications with strong attention to clean architecture, dependable APIs, modern tooling, and AI-assisted workflows that improve delivery."
   }
 } as const satisfies {
   eyebrow: string;
@@ -49,22 +49,22 @@ export const heroPanel = [
   {
     label: "Status",
     value: {
-      focus: "Available for junior software, full-stack, implementation, QA automation, and AI product roles in Australia.",
-      play: "ONLINE for junior software, full-stack, implementation, QA automation, and AI product teams across Australia."
+      focus: "Available for junior and mid-level full-stack software engineer and IT support roles across Sydney, Australia, including full-time, part-time, and remote opportunities.",
+      play: "Open to junior and mid-level full-stack software engineering and IT support roles, with flexibility for full-time, part-time, and remote teams."
     }
   },
   {
     label: "Current Mission",
     value: {
-      focus: "Placement student at Paypipe, building and testing AI-assisted concierge workflows for trade-service SaaS.",
-      play: "Running live AI concierge experiments at Paypipe, turning messy service conversations into scoped jobs, pricing, and next-step offers."
+      focus: "Placement student at Paypipe, contributing to full-stack product workflows and testing AI-assisted concierge features for a trade-services SaaS platform.",
+      play: "Currently supporting product delivery at Paypipe through React, Next.js, TypeScript, Node.js, PostgreSQL, and AI-assisted workflow experiments for trade-service operations."
     }
   },
   {
     label: "Core Stack",
     value: {
-      focus: "React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, REST APIs, testing, Docker, CI/CD.",
-      play: "React, Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, automation, testing, and product-ready AI workflow glue."
+      focus: "Node.js, TypeScript, React, Next.js, Express, NestJS, PostgreSQL, Docker, REST APIs, testing, and CI/CD, with MongoDB used in projects such as MeroGhar.",
+      play: "React, Next.js, Node.js, TypeScript, Express, NestJS, PostgreSQL, Docker, testing, and AI-assisted tools, with MongoDB experience through MeroGhar and earlier full-stack builds."
     }
   }
 ] as const satisfies ReadonlyArray<{ label: string; value: ModeValue<string> }>;
@@ -73,31 +73,32 @@ export const sectionCopy = {
   about: {
     kicker: "About",
     heading: {
-      focus: "A professional full-stack developer with product instincts and strong implementation range.",
-      play: "A grounded engineer in focus mode, with a little extra product energy in the system."
+      focus: "Full-stack software developer building scalable products with strong engineering fundamentals.",
+      play: "Full-stack developer focused on scalable products, practical delivery, and modern engineering workflows."
     },
     paragraphs: {
       focus: [
-        "I am a full-stack JavaScript and TypeScript developer from Nepal, currently based in Sydney, Australia. I build practical web applications that balance clean UI, reliable APIs, strong workflow design, and maintainable implementation.",
-        "I enjoy working on products that solve real workflow problems, whether that means building a full-stack platform, improving developer experience, automating business processes, or turning AI outputs into useful product features."
+        "I build production-ready, scalable web applications with a strong focus on code quality, performance, and long-term maintainability. I am a full-stack software developer based in Sydney, Australia, with hands-on experience delivering user-friendly products across the frontend and backend.",
+        "My core stack includes Node.js, TypeScript, React, Next.js, Express, NestJS, MongoDB, PostgreSQL, and Docker. I also use modern AI tools to improve developer productivity and support product workflows while staying grounded in practical software engineering fundamentals.",
+        "I am passionate about clean code, developer productivity, and learning modern frameworks. I am currently expanding my DevOps and cloud deployment knowledge through Docker and CI/CD-focused workflows."
       ],
       play: [
-        "I build software for real workflows, not just demo screens. The work I enjoy most sits where product clarity, dependable engineering, and a bit of interface craft all help the same user get unstuck faster.",
-        "NIKAN OS is the public version of that mindset: professional enough for hiring teams, but still expressive enough to show how I think about momentum, automation, and useful digital products."
+        "I enjoy building software that solves real workflow problems and holds up beyond the first demo. My work usually sits at the intersection of clean UI, reliable APIs, maintainable architecture, and delivery practices that help teams move with confidence.",
+        "Alongside full-stack product work, I stay current with AI-assisted tools, testing, and delivery workflows so I can contribute across implementation, iteration, and continuous improvement."
       ]
     }
   },
   experience: {
     kicker: "Experience",
     heading: {
-      focus: "Hands-on delivery across SaaS platforms, AI-assisted workflows, and full-stack product teams.",
-      play: "From SaaS platforms to AI concierge flows, this is the timeline behind the current build."
+      focus: "Hands-on delivery across SaaS products, full-stack systems, and AI-assisted workflows.",
+      play: "Experience across product delivery, backend systems, testing, and AI-assisted workflow implementation."
     },
     intro: {
       focus:
-        "My recent work spans AI-assisted trade-service workflows, internal business systems, learning platforms, project-generation SaaS, and backend-heavy product features.",
+        "My recent work includes full-stack SaaS delivery, internal business systems, learning platforms, role-based workflows, REST APIs, and AI-assisted product features.",
       play:
-        "The path runs through multi-product SaaS delivery, internal workflow systems, learning tools, and now AI-assisted business concierge work that has to be useful outside the lab."
+        "The experience below reflects a mix of implementation, testing, workflow design, and delivery across business systems, learning products, and production-oriented web applications."
     }
   },
   skills: {
@@ -123,21 +124,21 @@ export const sectionCopy = {
   contact: {
     kicker: "Contact",
     heading: {
-      focus: "Open to junior, graduate, and early-career engineering opportunities across Australia.",
-      play: "Open to teams building practical software, clean workflows, and useful AI-assisted products."
+      focus: "Open to full-stack software engineering and IT support opportunities in Sydney and remote.",
+      play: "Open to practical engineering teams hiring for full-stack software development and IT support work."
     },
     body: {
       focus:
-        "I am currently looking for junior software engineering, graduate software engineering, full-stack development, implementation engineering, QA automation, and AI product or web development opportunities.",
+        "Based in Sydney, Australia, I am open to full-time, part-time, and remote opportunities in junior to mid-level full-stack software engineering and IT support roles. I am especially interested in teams building production-ready web applications with strong engineering standards.",
       play:
-        "If your team values clear product thinking, dependable full-stack execution, and someone who enjoys turning rough workflow problems into software people can actually use, I would love to connect."
+        "If your team values dependable full-stack delivery, clean code, practical problem solving, and engineers who stay current with modern tools and workflows, I would be glad to connect."
     }
   }
 } as const;
 
 export const footerCopy = {
   focus: "Built to feel credible, clear, and ready for real product work.",
-  play: "Built to stay reliable first, then add a little signal, motion, and personality on top."
+  play: "Built to showcase reliable engineering, thoughtful product work, and modern full-stack capability."
 } as const satisfies ModeValue<string>;
 
 export const skillCategories: SkillCategory[] = [
@@ -176,16 +177,16 @@ export const skillCategories: SkillCategory[] = [
 export const experienceEntries: ExperienceEntry[] = [
   {
     company: "Paypipe",
-    role: "AI Software Engineer / Full-Stack Developer Placement Student",
+    role: "Full-Stack Developer Placement Student",
     period: "Feb 2026 - Present",
     location: "Sydney, Australia",
     summary:
-      "Building and testing AI-assisted business concierge workflows for a trade-services SaaS platform.",
+      "Contributing to full-stack product delivery and testing AI-assisted business concierge workflows for a trade-services SaaS platform.",
     highlights: [
-      "Worked on chat-driven flows that generate job scopes, pricing, and milestone-based offers.",
-      "Refined prompts and output structures using Azure OpenAI and GPT-4o mini.",
-      "Tested offer generation using chat context, manual inputs, PDF summarisation, and voice or audio translation.",
-      "Worked across React, Next.js, TypeScript, Node.js, PostgreSQL, and AI product workflows."
+      "Implemented and tested chat-driven workflows that generate job scopes, pricing, and milestone-based offers.",
+      "Improved prompt structures and output quality using Azure OpenAI and GPT-4o mini for production-oriented workflow scenarios.",
+      "Tested offer generation using chat context, manual inputs, PDF summarisation, and voice or audio translation flows.",
+      "Worked across React, Next.js, TypeScript, Node.js, PostgreSQL, and AI-assisted product workflows."
     ]
   },
   {
@@ -196,10 +197,10 @@ export const experienceEntries: ExperienceEntry[] = [
     summary:
       "Delivered features across multiple full-stack SaaS products covering business workflows, learning systems, and developer tooling.",
     highlights: [
-      "Built across TypeScript, React, Fastify, PostgreSQL, Docker, GitLab, Playwright, Jest, Socket.IO, and Make.com.",
-      "Contributed to Dzango-HQ Legal for approvals, documents, leave, calendars, reviews, and notifications.",
-      "Worked on Dzango LMS workflows for courses, skills, students, companies, invitations, grading, certification, and onboarding.",
-      "Helped build 12deg features including collaborative markdown editing, release graphing, Docker service controls, GitLab webhooks, and Playwright E2E coverage."
+      "Delivered features across TypeScript, React, Fastify, PostgreSQL, Docker, GitLab, Playwright, Jest, Socket.IO, and Make.com.",
+      "Implemented business workflow features in Dzango-HQ Legal covering approvals, documents, leave, calendars, reviews, and notifications.",
+      "Built LMS workflows for courses, skills, students, companies, invitations, grading, certification, and onboarding.",
+      "Contributed to 12deg features including collaborative markdown editing, release graphing, Docker service controls, GitLab webhooks, and Playwright end-to-end coverage."
     ]
   },
   {
@@ -208,11 +209,11 @@ export const experienceEntries: ExperienceEntry[] = [
     period: "Feb 2023 - Jul 2023",
     location: "Kathmandu, Nepal",
     summary:
-      "Built backend and admin features for healthcare and course-management products while strengthening API and architecture fundamentals.",
+      "Built backend and admin features for healthcare and course-management products while strengthening API design and architecture fundamentals.",
     highlights: [
       "Implemented REST APIs with Node.js, Express-TS, MongoDB, JWT or OAuth, Swagger, Jest, and Postman.",
       "Contributed to doctor and medicine management plus Codynn course-management workflows.",
-      "Supported early migration work toward a more type-safe backend architecture."
+      "Supported early migration work toward a more type-safe backend architecture and maintainable service structure."
     ]
   }
 ];
@@ -229,9 +230,9 @@ export const experienceSidebar = {
   focus: {
     title: "Current Focus",
     items: [
-      "AI-assisted business concierge workflows for trade-service SaaS",
-      "React Native, Expo, Supabase, and Go",
-      "Technical case studies, portfolio refinement, and product engineering"
+      "Production-ready full-stack web applications and scalable product workflows",
+      "AI-assisted development tools, testing, and modern delivery practices",
+      "DevOps learning through Docker, CI/CD, and cloud deployment fundamentals"
     ]
   },
   leadership: {

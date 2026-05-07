@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "@fontsource/ibm-plex-sans/400.css";
 import "@fontsource/ibm-plex-sans/500.css";
 import "@fontsource/space-grotesk/500.css";
@@ -10,9 +11,9 @@ import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "NIKAN OS",
+  title: "Nikan Khadka | Full-Stack Software Engineer",
   description:
-    "Portfolio of Nikan Khadka, a Sydney-based full-stack JavaScript and TypeScript developer building practical SaaS, AI-assisted workflows, and product-focused web applications."
+    "Portfolio of Nikan Khadka, a Sydney-based full-stack software engineer building production-ready web applications with React, Next.js, Node.js, TypeScript, modern tooling, and AI-assisted workflows."
 };
 
 export default function RootLayout({
@@ -30,9 +31,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" data-theme="focus" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
+      <Script id="theme-bootstrap" strategy="beforeInteractive">
+        {themeScript}
+      </Script>
       <body className="min-h-screen bg-[color:var(--background)] text-[color:var(--foreground)] antialiased">
         <ThemeProvider>
           <HomeSectionsProvider>

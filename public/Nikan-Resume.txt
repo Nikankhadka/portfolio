@@ -1,3 +1,63 @@
-Nikan Resume Placeholder
+Nikan Khadka
+Sydney, Australia
+nikan.khadka.2002@gmail.com
+github.com/Nikankhadka
+linkedin.com/in/nikan-khadka-6b9340212
 
-Replace this file with the final resume asset for production.
+Professional Summary
+Full-stack software engineer based in Sydney, Australia, with hands-on experience building production-ready and scalable web applications. Strong focus on code quality, performance, maintainability, and user-friendly product delivery across frontend and backend systems. Familiar with AI-assisted tools and workflows that improve developer productivity and support modern product development.
+
+Core Stack
+Node.js, TypeScript, React, Next.js, Express, NestJS, PostgreSQL, MongoDB, Docker, REST APIs, Jest, Playwright, GitHub Actions, GitLab, CI/CD
+
+Experience
+Paypipe
+Full-Stack Developer Placement Student
+Feb 2026 - Present | Sydney, Australia
+- Contributing to full-stack product delivery and testing AI-assisted business concierge workflows for a trade-services SaaS platform.
+- Implemented and tested chat-driven workflows that generate job scopes, pricing, and milestone-based offers.
+- Improved prompt structures and output quality using Azure OpenAI and GPT-4o mini for production-oriented workflow scenarios.
+- Worked across React, Next.js, TypeScript, Node.js, PostgreSQL, and AI-assisted product workflows.
+
+Eightbit / Dzangolab
+Software Developer
+Sep 2023 - Jan 2025 | Kathmandu, Nepal
+- Delivered features across multiple full-stack SaaS products covering business workflows, learning systems, and developer tooling.
+- Implemented product features using TypeScript, React, Fastify, PostgreSQL, Docker, GitLab, Playwright, Jest, Socket.IO, and Make.com.
+- Built workflow features for approvals, documents, calendars, reviews, notifications, onboarding, grading, and certification flows.
+- Contributed to 12deg features including collaborative markdown editing, release graphing, Docker service controls, GitLab webhooks, and Playwright end-to-end coverage.
+
+Softechtonic
+Full Stack Developer Intern
+Feb 2023 - Jul 2023 | Kathmandu, Nepal
+- Implemented REST APIs with Node.js, Express-TS, MongoDB, JWT or OAuth, Swagger, Jest, and Postman.
+- Contributed to healthcare and course-management workflows, including doctor, medicine, and admin-facing features.
+- Supported migration work toward a more type-safe backend architecture and maintainable service structure.
+
+Selected Project Achievements
+MeroGhar
+- Built an Airbnb-style rental platform for Nepal with multi-role workflows across tenant, property owner, and admin experiences.
+- Improved Lighthouse score from 57 to 89.
+- Reduced bundle or package size by more than 20%.
+- Improved selected API response performance by about 20%.
+- Added seed data, fixtures, documentation, and around 15 Playwright tests.
+- Used Next.js, TypeScript, Node.js, MongoDB, Docker, GitHub Actions, and Playwright.
+
+Agriculture Management System
+- Led a four-member team and built most of the system for farmer management, crop data, authentication, and admin or user workflows.
+- Used Next.js, Node.js, MongoDB, JWT authentication, and file uploads.
+
+Disease Prediction Prototype
+- Built a MERN-style application connected to a Python dataset or model workflow for symptom-based disease prediction.
+- Placed 2nd at Herald Expo / Hackathon 2022.
+
+Education
+Master of Information Technology in Artificial Intelligence
+Charles Darwin University, Sydney Campus
+Expected completion: October 2026
+
+Additional Information
+- Based in Sydney, Australia
+- Open to full-time, part-time, and remote roles
+- Available for junior and mid-level full-stack software engineer and IT support opportunities
+- Currently learning more about DevOps and cloud deployment through Docker and CI/CD workflows

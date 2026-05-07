@@ -11,7 +11,7 @@ export const projects: ProjectEntry[] = [
       "Next.js",
       "TypeScript",
       "Node.js",
-      "PostgreSQL",
+      "MongoDB",
       "Docker",
       "GitHub Actions",
       "Playwright"

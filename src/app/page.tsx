@@ -43,7 +43,7 @@ export default function Home() {
       <SectionShell
         id={introSection.id}
         variant="snap"
-        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col justify-center overflow-y-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-12"
+        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col justify-center overflow-y-auto px-6 py-10 sm:px-6 lg:px-8 lg:py-12"
       >
         <HeroSection />
       </SectionShell>
@@ -51,13 +51,13 @@ export default function Home() {
       <SectionShell
         id={aboutSection.id}
         variant="snap"
-        contentClassName="mx-auto grid h-full w-full max-w-7xl gap-8 overflow-y-auto px-4 py-10 sm:px-6 lg:grid-cols-[0.7fr_1fr] lg:px-8 lg:py-12"
+        contentClassName="mx-auto grid h-full w-full max-w-7xl items-center gap-8 overflow-y-auto px-6 py-10 sm:px-6 lg:grid-cols-[0.7fr_1fr] lg:px-8 lg:py-12"
       >
-        <div>
+        <div className="space-y-4 self-center">
           <p className="section-kicker">{sectionCopy.about.kicker}</p>
           <h2 className="section-heading">{aboutHeading}</h2>
         </div>
-        <div className="space-y-5">
+        <div className="space-y-5 self-center">
           {aboutParagraphs.map((paragraph) => (
             <p key={paragraph} className="text-base leading-8 text-[color:var(--copy)] sm:text-lg">
               {paragraph}
@@ -69,40 +69,40 @@ export default function Home() {
       <SectionShell
         id={experienceSection.id}
         variant="snap"
-        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col gap-8 overflow-y-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-12"
+        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col gap-8 overflow-y-auto px-6 py-10 sm:px-6 lg:px-8 lg:py-12"
       >
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div className="section-header">
           <div>
             <p className="section-kicker">{sectionCopy.experience.kicker}</p>
             <h2 className="section-heading">{experienceHeading}</h2>
           </div>
-          <p className="max-w-2xl text-base leading-7 text-[color:var(--copy)]">{experienceIntro}</p>
+          <p className="section-header-copy text-base leading-7 text-[color:var(--copy)]">{experienceIntro}</p>
         </div>
 
-        <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+        <div className="grid items-stretch gap-6 xl:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-4">
             {experienceEntries.map((entry) => (
               <article
                 key={`${entry.company}-${entry.period}`}
-                className="rounded-[2rem] bg-[color:var(--panel)] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_18px_48px_rgba(0,0,0,0.18)]"
+                className="rounded-[2rem] bg-[color:var(--panel)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_18px_48px_rgba(0,0,0,0.18)] sm:p-6"
               >
-                <div className="flex flex-col gap-4 border-b border-[color:var(--border-subtle)] pb-5 md:flex-row md:items-start md:justify-between">
-                  <div className="space-y-2">
+                <div className="flex flex-col gap-3 border-b border-[color:var(--border-subtle)] pb-4 md:flex-row md:items-start md:justify-between">
+                  <div className="space-y-1.5">
                     <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[color:var(--accent)]">{entry.company}</p>
-                    <h3 className="font-display text-2xl uppercase tracking-[0.1em] text-[color:var(--foreground)]">
+                    <h3 className="font-display text-xl uppercase tracking-[0.1em] text-[color:var(--foreground)]">
                       {entry.role}
                     </h3>
                     <p className="text-sm leading-6 text-[color:var(--copy)]">{entry.summary}</p>
                   </div>
-                  <div className="space-y-2 text-sm text-[color:var(--muted)] md:text-right">
+                  <div className="space-y-1 text-sm text-[color:var(--muted)] md:text-right">
                     <p>{entry.period}</p>
                     <p>{entry.location}</p>
                   </div>
                 </div>
 
-                <ul className="mt-5 space-y-3">
+                <ul className="mt-4 space-y-2.5">
                   {entry.highlights.map((highlight) => (
-                    <li key={highlight} className="rounded-[1.4rem] bg-[color:var(--panel-muted)] px-4 py-3 text-sm leading-6 text-[color:var(--copy)]">
+                    <li key={highlight} className="rounded-[1.4rem] bg-[color:var(--panel-muted)] px-4 py-2.5 text-sm leading-6 text-[color:var(--copy)]">
                       {highlight}
                     </li>
                   ))}
@@ -111,14 +111,14 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3 xl:grid-cols-1">
+          <div className="grid gap-4 sm:grid-cols-3 xl:grid-cols-1 xl:content-start">
             {Object.values(experienceSidebar).map((section) => (
               <aside
                 key={section.title}
-                className="rounded-[2rem] bg-[color:var(--panel)] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_18px_48px_rgba(0,0,0,0.18)]"
+                className="flex flex-col rounded-[2rem] bg-[color:var(--panel)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_18px_48px_rgba(0,0,0,0.18)] sm:p-6"
               >
                 <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[color:var(--accent)]">{section.title}</p>
-                <ul className="mt-5 space-y-3">
+                <ul className="mt-4 space-y-2.5">
                   {section.items.map((item) => (
                     <li key={item} className="text-sm leading-6 text-[color:var(--copy)]">
                       {item}
@@ -134,21 +134,21 @@ export default function Home() {
       <SectionShell
         id={skillsSection.id}
         variant="snap"
-        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col gap-8 overflow-y-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-12"
+        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col gap-8 overflow-y-auto px-6 py-10 sm:px-6 lg:px-8 lg:py-12"
       >
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div className="section-header">
           <div>
             <p className="section-kicker">{sectionCopy.skills.kicker}</p>
             <h2 className="section-heading">{skillsHeading}</h2>
           </div>
-          <p className="max-w-2xl text-base leading-7 text-[color:var(--copy)]">{skillsIntro}</p>
+          <p className="section-header-copy text-base leading-7 text-[color:var(--copy)]">{skillsIntro}</p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 md:auto-rows-fr md:grid-cols-2 xl:grid-cols-3">
           {skillCategories.map((category) => (
             <article
               key={category.id}
-              className="rounded-[2rem] bg-[color:var(--panel)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_18px_48px_rgba(0,0,0,0.18)]"
+              className="flex flex-col rounded-[2rem] bg-[color:var(--panel)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_18px_48px_rgba(0,0,0,0.18)] md:h-full"
             >
               <p className="text-[0.7rem] uppercase tracking-[0.35em] text-[color:var(--accent)]">{category.label}</p>
               <ul className="mt-5 space-y-3">
@@ -169,9 +169,9 @@ export default function Home() {
       <SectionShell
         id={projectsSection.id}
         variant="snap"
-        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col gap-8 overflow-y-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-12"
+        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col gap-8 overflow-y-auto px-6 py-10 sm:px-6 lg:px-8 lg:py-12"
       >
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div className="section-header">
           <div>
             <p className="section-kicker">{sectionCopy.projects.kicker}</p>
             <h2 className="section-heading">{projectsHeading}</h2>
@@ -180,13 +180,13 @@ export default function Home() {
             <Link href="/#contact" className="secondary-cta">
               Contact Me
             </Link>
-            <Link href="/Nikan-Resume.txt" download className="secondary-cta">
+            <Link href="/Nikan-Khadka-Resume.pdf" download className="secondary-cta">
               Download Resume
             </Link>
           </div>
         </div>
 
-        <div className="grid gap-5 xl:grid-cols-3">
+        <div className="grid auto-rows-fr gap-5 xl:grid-cols-3">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
@@ -196,13 +196,13 @@ export default function Home() {
       <SectionShell
         id={contactSection.id}
         variant="snap"
-        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col gap-10 overflow-y-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-12"
+        contentClassName="mx-auto flex h-full w-full max-w-7xl flex-col gap-10 overflow-y-auto px-6 py-10 sm:px-6 lg:px-8 lg:py-12"
       >
-        <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr]">
-          <div>
+        <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.8fr]">
+          <div className="space-y-4">
             <p className="section-kicker">{sectionCopy.contact.kicker}</p>
             <h2 className="section-heading">{contactHeading}</h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[color:var(--copy)] sm:text-lg">{contactBody}</p>
+            <p className="section-header-copy text-base leading-8 text-[color:var(--copy)] sm:text-lg">{contactBody}</p>
           </div>
 
           <div className="rounded-[2rem] bg-[color:var(--panel)] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_18px_52px_rgba(0,0,0,0.2)]">
@@ -227,7 +227,7 @@ export default function Home() {
         <footer className="mt-auto py-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="font-display text-2xl uppercase tracking-[0.2em] text-[color:var(--foreground)]">NIKAN OS</p>
+              <p className="font-display text-xl uppercase tracking-[0.2em] text-[color:var(--foreground)]">Nikan Khadka</p>
               <p className="mt-2 text-sm text-[color:var(--muted)]">{footerBody}</p>
             </div>
             <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.28em] text-[color:var(--muted)]">

@@ -18,12 +18,12 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Project Not Found | NIKAN OS"
+      title: "Project Not Found | Nikan Khadka"
     };
   }
 
   return {
-    title: `${project.title} | NIKAN OS`,
+    title: `${project.title} | Nikan Khadka`,
     description: project.summary
   };
 }

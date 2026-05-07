@@ -22,7 +22,7 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
     <motion.article
       whileHover={reduceMotion ? undefined : { y: -8 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
-      className="group h-full rounded-[2rem] bg-[color:var(--panel)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_16px_60px_rgba(0,0,0,0.25)]"
+      className="group flex h-full flex-col rounded-[2rem] bg-[color:var(--panel)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_16px_60px_rgba(0,0,0,0.25)]"
     >
       <div
         className={cn(
@@ -38,13 +38,13 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
           <p className="mb-3 text-xs uppercase tracking-[0.32em] text-[color:var(--accent)]">
             Featured Build
           </p>
-          <h3 className="font-display text-3xl uppercase tracking-[0.12em] text-[color:var(--foreground)]">
+          <h3 className="font-display text-xl uppercase tracking-[0.12em] text-[color:var(--foreground)]">
             {project.title}
           </h3>
         </div>
       </div>
 
-      <div className="space-y-4">
+      <div className="flex h-full flex-col space-y-4">
         <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--muted)]">
           {project.role}
         </p>
@@ -66,7 +66,7 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
         </div>
         <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-2 pt-2 text-sm font-medium uppercase tracking-[0.25em] text-[color:var(--foreground)] transition group-hover:text-[color:var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)]"
+          className="mt-auto inline-flex items-center gap-2 pt-2 text-sm font-medium uppercase tracking-[0.25em] text-[color:var(--foreground)] transition group-hover:text-[color:var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)]"
         >
           Open Case Study
           <span aria-hidden="true">↗</span>
