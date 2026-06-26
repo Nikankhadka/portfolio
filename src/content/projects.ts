@@ -20,10 +20,10 @@ export const projects: ProjectEntry[] = [
       "Improved performance, delivery confidence, and production readiness across a feature-rich rental platform with multi-role workflows.",
     status: "Live project",
     year: "Recent",
-    coverVariant: "system",
+    githubRepo: "Nikankhadka/fyp",
     featured: true,
     links: [
-      { label: "Live", href: "https://fyp-web-inky.vercel.app/Home" },
+      { label: "Live", href: "https://fyp-pi-sand.vercel.app/Home" },
       { label: "GitHub", href: "https://github.com/Nikankhadka/fyp" }
     ],
     problem:
@@ -56,7 +56,7 @@ export const projects: ProjectEntry[] = [
       "Showed end-to-end ownership by leading a small team while building most of the application and core workflow features.",
     status: "Academic team project",
     year: "Academic",
-    coverVariant: "mission",
+    githubRepo: "Nikankhadka/GroupD-g5",
     featured: true,
     problem:
       "The project needed a usable way to manage farmer information, crop data, authentication, and admin or user workflows inside one web application.",
@@ -75,30 +75,67 @@ export const projects: ProjectEntry[] = [
     ]
   },
   {
-    slug: "disease-prediction-prototype",
-    title: "Disease Prediction Prototype",
+    slug: "himalayan-threads",
+    title: "Himalayan Threads",
     summary:
-      "A hackathon prototype that used symptom inputs and a Python-backed model flow to predict likely conditions.",
-    role: "Full-Stack Team Contributor",
-    stack: ["MongoDB", "Express", "React", "Node.js", "Python"],
+      "A rug website showcasing Himalayan handwoven textiles — a storefront-style product catalogue with a focus on craft, origin, and story.",
+    role: "Full-Stack Developer",
+    stack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Docker"],
     impact:
-      "Combined application delivery with an applied ML-style prototype in a competitive event setting.",
-    status: "Hackathon prototype",
-    year: "2022",
-    coverVariant: "terminal",
+      "A focused product catalogue concept for a Nepali textile brand, built to make handwoven rugs easy to browse and present their provenance clearly.",
+    status: "Live project",
+    year: "Recent",
+    githubRepo: "Nikankhadka/rug",
     featured: true,
+    links: [{ label: "GitHub", href: "https://github.com/Nikankhadka/rug" }],
     problem:
-      "The challenge was to turn symptom inputs into a fast, understandable prediction flow within the time pressure of a hackathon environment.",
+      "Handwoven Himalayan rugs needed a clean, story-driven storefront that surfaces product origin, materials, and craft without overwhelming the visitor.",
     approach:
-      "Our team built a MERN-style application and connected it to a Python dataset and model workflow so user inputs could produce likely-condition predictions.",
+      "I built a Next.js storefront with a typographic, image-led catalogue: product cards, collection views, and a minimal editorial layout that lets the textiles lead.",
     outcome:
-      "The prototype placed second at Herald Expo / Hackathon 2022 and remains a strong example of rapid collaboration under constraints.",
+      "A polished, fast storefront foundation that presents a small rug catalogue with room to grow into cart and checkout flows.",
     highlights: [
-      "Built during Herald Expo / Hackathon 2022.",
-      "Combined a MERN-style application with a Python dataset or model flow.",
-      "Focused on symptom-input prediction in a fast prototype format."
+      "Next.js + TypeScript storefront with a typographic editorial layout.",
+      "Product catalogue and collection views sized for a small handmade catalogue.",
+      "Dockerised for repeatable local development and future deployment.",
+      "Designed to extend cleanly toward cart, checkout, and CMS-driven product entries."
     ],
-    results: ["Placed 2nd at Herald Expo / Hackathon 2022."]
+    results: [
+      "A focused, performant rug catalogue foundation ready for production polish.",
+      "Clean editorial visual language that elevates craft and provenance over noise."
+    ]
+  },
+  {
+    slug: "portfolio",
+    title: "Portfolio Site",
+    summary:
+      "This portfolio — an editorial Swiss-minimal site with a live GitHub contribution sync, contribution heatmap, current-project spotlight, and a sakura motif tying sections together.",
+    role: "Designer & Developer",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS v4", "Framer Motion", "GitHub GraphQL API"],
+    impact:
+      "A portfolio that doubles as an engineering demonstration: server-side GitHub data fetching, ISR-cached API route, reduced-motion-aware animation, snap-scroll UX, and a Vercel-friendly deploy.",
+    status: "Live project",
+    year: "2026",
+    githubRepo: "Nikankhadka/portfolio",
+    featured: true,
+    links: [{ label: "GitHub", href: "https://github.com/Nikankhadka/portfolio" }],
+    problem:
+      "A software engineer's portfolio should show, not just tell, that the engineer can ship a polished product with real integration and thoughtful UX.",
+    approach:
+      "I built a Next.js 16 app-router site: a single `/api/github` route handler with ISR (30-min revalidate) fetches user, contribution calendar, allowlist repo stats, and an activity feed via GitHub GraphQL + REST APIs, keeps the token server-only, and ships a curated JSON payload to client components.",
+    outcome:
+      "A clean, minimal, animated single-page site that surfaces real work in sync with GitHub, with a snap-scroll editorial layout and a sakura branch + petal motif for visual character.",
+    highlights: [
+      "Single server-side `/api/github` route with ISR revalidate; token never shipped to browser.",
+      "Live contribution heatmap, current-project spotlight, recent-activity feed, and language-usage bar.",
+      "Snap-to-center scroll with proximity snapping, alternating section backgrounds, and reduced-motion support.",
+      "Editorial Swiss-minimal palette: cream canvas, coral-apricot panels, light-teal accents.",
+      "Designed and coded end-to-end — including the sakura SVG branches and petals."
+    ],
+    results: [
+      "Live sync of contributions, repos, and activity across 5 tracked repositories.",
+      "Full accessibility: skip-link, reduced-motion, keyboard nav, focus styles."
+    ]
   }
 ];
 

@@ -3,58 +3,57 @@
 import { motion, useReducedMotion } from "framer-motion";
 import type { PropsWithChildren } from "react";
 
-import { useHomeSections } from "@/components/home-sections-provider";
 import { cn } from "@/lib/utils";
 
 type SectionShellProps = PropsWithChildren<{
   id: string;
+  /** Two-digit section index, e.g. "01". Pass null to hide. */
+  index?: string | null;
   className?: string;
   contentClassName?: string;
-  variant?: "default" | "snap";
+  /** Snap-center layout for the homepage shell. Off => normal scrolling block. */
+  snap?: boolean;
+  /** Alternating background — 'odd' sections get the cream variant so adjacent never bleed. */
+  tone?: "even" | "odd";
 }>;
 
 export function SectionShell({
   children,
+  id,
+  index = null,
   className,
   contentClassName,
-  id,
-  variant = "default"
+  snap = true,
+  tone = "even"
 }: SectionShellProps) {
   const reduceMotion = useReducedMotion();
-  const { activeSection } = useHomeSections();
+  const bg = tone === "odd" ? "var(--section-bg-odd)" : "var(--section-bg-even)";
 
-  if (variant === "snap") {
-    const isActive = activeSection === id;
-
+  if (snap) {
     return (
       <motion.section
         id={id}
-        data-active={isActive ? "true" : "false"}
-        className={cn("home-snap-section relative", className)}
+        className={cn("snap-shell-section", className)}
+        style={{
+          minHeight: "100%",
+          scrollSnapAlign: "center",
+          scrollSnapStop: "normal",
+          display: "grid",
+          placeItems: "center",
+          padding: "var(--section-y) 0",
+          background: bg,
+          overflow: "clip",
+          isolation: "isolate"
+        }}
         initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-        animate={
-          reduceMotion
-            ? undefined
-            : {
-                opacity: isActive ? 1 : 0.9,
-                y: 0
-              }
-        }
-        transition={{ duration: 0.35, ease: "easeOut" }}
+        whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <motion.div
-          className={cn("home-snap-panel", contentClassName)}
-          animate={
-            reduceMotion
-              ? undefined
-              : {
-                  scale: isActive ? 1 : 0.985
-                }
-          }
-          transition={{ duration: 0.35, ease: "easeOut" }}
-        >
+        <div className={cn("mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8", contentClassName)}>
+          {index ? <SectionIndex index={index} /> : null}
           {children}
-        </motion.div>
+        </div>
       </motion.section>
     );
   }
@@ -62,13 +61,26 @@ export function SectionShell({
   return (
     <motion.section
       id={id}
-      className={cn("scroll-mt-[calc(var(--header-height)+1rem)]", className)}
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+      className={cn("scroll-mt-[calc(var(--header-height)+1.25rem)]", className)}
+      style={{ background: bg, isolation: "isolate" }}
+      initial={reduceMotion ? false : { opacity: 0, y: 20 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.18 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      {children}
+      <div className={cn("mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8", contentClassName)}>
+        {index ? <SectionIndex index={index} /> : null}
+        {children}
+      </div>
     </motion.section>
+  );
+}
+
+function SectionIndex({ index }: { index: string }) {
+  return (
+    <div className="mb-8 flex items-center gap-3">
+      <span className="section-index">{index}</span>
+      <span className="h-px w-12 bg-[color:var(--accent-light)] opacity-60" />
+    </div>
   );
 }

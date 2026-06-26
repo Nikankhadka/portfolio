@@ -1,41 +1,28 @@
 "use client";
 
-import { createContext, useContext, useMemo, useState, type PropsWithChildren } from "react";
-import { usePathname } from "next/navigation";
+import {
+  createContext,
+  useContext,
+  useMemo,
+  useState,
+  type PropsWithChildren
+} from "react";
 
-import { isHomeSectionId } from "@/content/site";
 import type { HomeSectionId } from "@/content/types";
 
 type HomeSectionsContextValue = {
-  activeSection: HomeSectionId;
-  isHomePage: boolean;
-  setActiveSection: (section: HomeSectionId) => void;
+  activeSection: HomeSectionId | null;
+  setActiveSection: (section: HomeSectionId | null) => void;
 };
 
 const HomeSectionsContext = createContext<HomeSectionsContextValue | null>(null);
 
-function getHashSection(): HomeSectionId {
-  if (typeof window === "undefined") {
-    return "intro";
-  }
-
-  const hashValue = window.location.hash.replace("#", "");
-
-  return isHomeSectionId(hashValue) ? hashValue : "intro";
-}
-
 export function HomeSectionsProvider({ children }: PropsWithChildren) {
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
-  const [activeSection, setActiveSection] = useState<HomeSectionId>(getHashSection);
+  const [activeSection, setActiveSection] = useState<HomeSectionId | null>(null);
 
-  const value = useMemo(
-    () => ({
-      activeSection: isHomePage ? activeSection : "intro",
-      isHomePage,
-      setActiveSection
-    }),
-    [activeSection, isHomePage]
+  const value = useMemo<HomeSectionsContextValue>(
+    () => ({ activeSection, setActiveSection }),
+    [activeSection]
   );
 
   return <HomeSectionsContext.Provider value={value}>{children}</HomeSectionsContext.Provider>;
@@ -43,10 +30,8 @@ export function HomeSectionsProvider({ children }: PropsWithChildren) {
 
 export function useHomeSections() {
   const context = useContext(HomeSectionsContext);
-
   if (!context) {
     throw new Error("useHomeSections must be used within HomeSectionsProvider");
   }
-
   return context;
 }
